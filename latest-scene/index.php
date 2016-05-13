@@ -1,4 +1,4 @@
-<?
+<?php
 $header = '
 
   <!-- Set the viewport width to device width for mobile -->
@@ -21,7 +21,10 @@ $header = '
     window.rscData = JSON.parse(rscData);
   }
   </script>
-  <script src="https://script.google.com/macros/s/AKfycbysSW4_qjnyjvVsuNsJGvaaZIQsdtzVdPhxZ_kMzKFtttwj-hKx/exec"></script';
+  <script src="https://script.google.com/macros/s/AKfycbysSW4_qjnyjvVsuNsJGvaaZIQsdtzVdPhxZ_kMzKFtttwj-hKx/exec"></script>
+  
+  
+  ';
 require_once("../dependencies/functions.php");
 getHeader($header,'Research the Panorama', 'scene');?>
   <!-- Begin #container -->
@@ -81,13 +84,86 @@ getHeader($header,'Research the Panorama', 'scene');?>
     <section id="resources-only" class="rsContent">
       <div class="rsTmb" data-placement="bottom" title="View resources for this scene"><i class="icon-info-sign icon-white" ></i><i class="icon-th-large icon-white"></i></div>
       <div id="resources-container" class="container">
-        <h4 class="row">Resources</h4>
-        <div id="resources" class="row"><img src="preloaders/preloader.gif" alt="Loading..."></div>
+<!--        <h4 class="row">Garibaldi Resources Explorer</h4>-->
+<!--        <div id="resources" class="row"><img src="preloaders/preloader.gif" alt="Loading..."></div>-->
+          <div id="wrapper" class="container">
+    <div class="row" id="resources-row">
+      <div class="page-header">
+        <h1>
+            Garibaldi resources explorer <br />
+            <small>Contemporary documents about the exploits of Garibaldi</small>
+          </h1>
+      </div>
+
+      <!-- Left column - facets -->
+
+      <div id="charts" class="col-md-6">
+        
+        <h2>Filters 
+          <button class="btn btn-xs btn-info" style="" id="clear-filters-button">Clear all</button>
+        </h2>
+        <p>Click on the charts to select items of interest &mdash; the listing will update.</p>
+        
+        <!-- Facet: Scene -->
+
+        <h3>Scene</h3>
+        <div id="text-facet-language" class="facet facet-scene" 
+             data-facet-type="scene" data-dimension="scene"></div>
+        
+        <!-- Facet: location -->
+        
+        <h3>Place of publication</h3>
+        <div id="map">
+          <div class="facet" data-facet-type="map" 
+               data-dimension="location.geometry.coordinates[0];location.geometry.coordinates[1]">
+          </div>
+          <div class="facet" data-facet-type="template" data-dimension="year"></div>
+        </div>
+          
+        <!-- Facet: Publication year -->
+        
+        <h3>Year Published</h3>
+        
+        <div id="year-chart" class="facet"
+             data-facet-type="barchart" data-dimension="year"></div>
+          
+        <!-- Facet: Language -->
+
+        <h3>Language</h3>
+        <div id="text-facet-language" class="facet" 
+             data-facet-type="text" data-dimension="language"></div>
+      </div>
+
+      <!-- Right column - results -->
+
+      <div id="results-list" class="col-md-6">
+        <!--
+        <div id="results-facet" class="facet"
+             data-facet-type="garibaldi-results" data-dimension="year"></div>-->
+        
+        <div class="panel panel-default" id="bookBox-container">
+          <div class="panel-heading">
+            <h1 class="panel-title">
+              Filtered resources
+              <span id="active" class="badge">-</span>
+            </h1>
+          </div>
+          <div class="panel-body">
+            <div id="lists">
+              <div id="resource-list" class="facet list" data-facet-type="garibaldi-results" data-dimension="year"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
       </div>
     </section><!-- end #resources -->
     </article>   
   </div><!-- End #container -->
+
   <script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+  <script data-main="js/cds-facet/main" data-source="data/gre-data.js" src="js/cds-facet/require.js"></script>
   <script src="javascripts/jquery-ui-1.8.23.custom.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script src="javascripts/jquery.placeholder.js"></script>
@@ -95,6 +171,9 @@ getHeader($header,'Research the Panorama', 'scene');?>
   <script src="javascripts/jquery.scrollTo.min.js"></script>
   <script src="javascripts/mediaelement-and-player.min.js"></script>
   <script src="javascripts/app.js?<?php echo time();?>"></script>
+  <script src="js/cds-facet/crossfilter.min.js"></script>
+
+
 	
 	<!-- Optional regions 
 	<script type="text/javascript">

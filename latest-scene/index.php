@@ -88,31 +88,33 @@ getHeader($header,'Research the Panorama', 'scene');?>
 <!--        <div id="resources" class="row"><img src="preloaders/preloader.gif" alt="Loading..."></div>-->
           <div id="wrapper" class="container">
     <div class="row" id="resources-row">
+<!--
       <div class="page-header">
-        <h1>
-            Garibaldi resources explorer <br />
-            <small>Contemporary documents about the exploits of Garibaldi</small>
-          </h1>
+        
       </div>
+-->
 
       <!-- Left column - facets -->
 
       <div id="charts" class="col-md-6">
-        
-        <h2>Filters 
+        <h3>
+            Garibaldi resources explorer<br>
+            <small>Contemporary documents about the exploits of Garibaldi</small>
+          </h3>
+        <h4>Filters 
           <button class="btn btn-xs btn-info" style="" id="clear-filters-button">Clear all</button>
-        </h2>
+        </h4>
         <p>Click on the charts to select items of interest &mdash; the listing will update.</p>
         
         <!-- Facet: Scene -->
 
-        <h3>Scene</h3>
+        <h4>Scene</h4>
         <div id="text-facet-language" class="facet facet-scene" 
              data-facet-type="scene" data-dimension="scene"></div>
         
         <!-- Facet: location -->
         
-        <h3>Place of publication</h3>
+        <h4>Place of publication</h4>
         <div id="map">
           <div class="facet" data-facet-type="map" 
                data-dimension="location.geometry.coordinates[0];location.geometry.coordinates[1]">
@@ -122,7 +124,7 @@ getHeader($header,'Research the Panorama', 'scene');?>
           
         <!-- Facet: Publication year -->
         
-        <h3>Year Published</h3>
+        <h4>Year Published</h4>
         
         <div id="year-chart" class="facet"
              data-facet-type="barchart" data-dimension="year"></div>
@@ -143,10 +145,10 @@ getHeader($header,'Research the Panorama', 'scene');?>
         
         <div class="panel panel-default" id="bookBox-container">
           <div class="panel-heading">
-            <h1 class="panel-title">
+            <h4 class="panel-title">
               Filtered resources
               <span id="active" class="badge">-</span>
-            </h1>
+            </h4>
           </div>
           <div class="panel-body">
             <div id="lists">

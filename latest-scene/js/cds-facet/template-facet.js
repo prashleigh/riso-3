@@ -21,7 +21,7 @@ define(function() {
     // Render output to domNode
     
     function update(){
-      $(domNode).text('FACET OUTPUT HERE');
+//      $(domNode).text('FACET OUTPUT HERE');
     }
     
     function clearFilter() {

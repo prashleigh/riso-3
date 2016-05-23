@@ -98,9 +98,10 @@ getHeader($header,'Research the Panorama', 'scene');?>
 
       <div id="charts" class="col-md-6">
         <h3>
-            Garibaldi resources explorer<br>
-            <small>Contemporary documents about the exploits of Garibaldi</small>
+            <small>Explore over 4,000 resources from a variety of collections to know more about how artist John James Story constructed each scene of the Panorama, and to learn more about historical contingencies and political climate around the Risorgimento in Italy, Europe, and the Americas at the time. <a>Full Description</a></small>
+
           </h3>
+                      <br>
         <h4>Filters 
           <button class="btn btn-xs btn-info" style="" id="clear-filters-button">Clear all</button>
         </h4>
@@ -109,12 +110,14 @@ getHeader($header,'Research the Panorama', 'scene');?>
         <!-- Facet: Scene -->
 
         <h4>Scene</h4>
+          <h3><small>To see related publications, select one or more scenes of the Panorama. Click on [Non-scene related sources] to find out more about publications on the Risorgimento.</small></h3>
         <div id="text-facet-language" class="facet facet-scene" 
              data-facet-type="scene" data-dimension="scene"></div>
         
         <!-- Facet: location -->
         
         <h4>Place of publication</h4>
+          <h3><small>To select publication sites, click and draw a square around the area of interest. Zoom in to refine the selection.</small></h3>
         <div id="map">
           <div class="facet" data-facet-type="map" 
                data-dimension="location.geometry.coordinates[0];location.geometry.coordinates[1]">
@@ -125,13 +128,15 @@ getHeader($header,'Research the Panorama', 'scene');?>
         <!-- Facet: Publication year -->
         
         <h4>Year Published</h4>
+          <h3><small>Click and drag the mouse over the timeline to select a time range of interest or use the buttons below to see publications published in 1860, 1861, 1862 only</small></h3>
         
         <div id="year-chart" class="facet"
              data-facet-type="barchart" data-dimension="year"></div>
           
         <!-- Facet: Language -->
 
-        <h3>Language</h3>
+        <h4>Language</h4>
+          <h3><small>Select one or more languages</small></h3>
         <div id="text-facet-language" class="facet" 
              data-facet-type="text" data-dimension="language"></div>
       </div>

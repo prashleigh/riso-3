@@ -375,7 +375,7 @@ max-width: 400px;
 }
 
 #resources-row {
-    width:85%;
+    width:93%;
     margin:0 auto;
 }
 
@@ -419,6 +419,14 @@ h3, small {
 }
 .col-md-6 {
     width:45%;
+}
+a {
+    cursor:pointer;
+}
+@media screen and (max-width: 1200px) {
+    .col-md-6 {
+        width:100%;
+    }
 }
 /* -----------------------------------------
    Transcript styles

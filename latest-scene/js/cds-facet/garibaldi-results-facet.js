@@ -43,7 +43,7 @@ define(function() {
         var listingText,
             allItems = crossFilterDimension.top(Infinity),
             makeSceneLink = function (scene) {
-              if (scene !== '[Non-panorama history]')
+              if (scene !== '[Non-scene related sources]')
                 return '<a target="_blank" href="' + 
                        SCENE_URL_BASE + scene + '">' + scene + 
                        '</a>';
@@ -139,7 +139,9 @@ define(function() {
           $('#resource-list').append('<p>Numbers ' + (currentViewRange.start + 1) + ' to ' + currentViewRange.end + '</p>');
         }
         
-        allItems.slice(currentViewRange.start, currentViewRange.end)
+        allItems.sort(function(x, y){
+           return d3.ascending(x.short_title, y.short_title);
+        }).slice(currentViewRange.start, currentViewRange.end)
                 .forEach(function (item) {
           
           var author, url;

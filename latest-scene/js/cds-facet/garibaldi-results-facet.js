@@ -160,14 +160,19 @@ define(function() {
           } else {
             url = RESOURCE_URL_BASE + item.URLID;
           }
-          
+
+          var source_type;
+          if (item["resource-type"] == 'primary')
+              source_type = 'P';
+          else
+              source_type = 'S';
           // url = (item.URLID.substring(0,4) === 'http' ? '' : RESOURCE_URL_BASE) + item.URLID;
           
-          listingText = '<p>' +
+          listingText = '<p> <span class="badge ps">' + source_type + '</span>' +
             '<strong>' +
             // '<a href="' + RESOURCE_URL_BASE + item.URLID + '" target="_BLANK">' + 
             '<a href="' + url + '" target="_BLANK">' + 
-              item.short_title + '</a>' +
+                item.short_title + '</a>' +
             '</strong>' +
             ' (' + item.year.getFullYear() + ')<br />' +
             author +

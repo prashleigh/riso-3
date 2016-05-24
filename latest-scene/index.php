@@ -9,6 +9,7 @@ $header = '
   <link rel="stylesheet" href="stylesheets/rs-default-inverted.css">
   <link rel="stylesheet" href="stylesheets/mediaelementplayer.min.css">
   <link rel="stylesheet" href="stylesheets/app.css">
+  
 	<style type="text/css">
 	 .navbar{margin-bottom: 0;}
 	</style>
@@ -98,8 +99,7 @@ getHeader($header,'Research the Panorama', 'scene');?>
 
       <div id="charts" class="col-md-6">
         <h3>
-            <small>Explore over 4,000 resources from a variety of collections to know more about how artist John James Story constructed each scene of the Panorama, and to learn more about historical contingencies and political climate around the Risorgimento in Italy, Europe, and the Americas at the time. <a>Full Description</a></small>
-
+            <small>Explore over 4,000 resources from a variety of collections to know more about how artist John James Story constructed each scene of the Panorama, and to learn more about historical contingencies and political climate around the Risorgimento in Italy, Europe, and the Americas at the time. <a href="../resources/explorer.php">Read More</a></small>
           </h3>
                       <br>
         <h4>Filters 
@@ -108,12 +108,12 @@ getHeader($header,'Research the Panorama', 'scene');?>
         <p>Click on the charts to select items of interest &mdash; the listing will update.</p>
         
         <!-- Facet: Scene -->
-
+          <div style="display:none">
         <h4>Scene</h4>
           <h3><small>To see related publications, select one or more scenes of the Panorama. Click on [Non-scene related sources] to find out more about publications on the Risorgimento.</small></h3>
         <div id="text-facet-language" class="facet facet-scene" 
              data-facet-type="scene" data-dimension="scene"></div>
-        
+        </div>
         <!-- Facet: location -->
         
         <h4>Place of publication</h4>
@@ -151,9 +151,17 @@ getHeader($header,'Research the Panorama', 'scene');?>
         <div class="panel panel-default" id="bookBox-container">
           <div class="panel-heading">
             <h4 class="panel-title">
+              <span style="float:left">
               Filtered resources
               <span id="active" class="badge">-</span>
+                  </span>
+                <span style="float:right">
+               <span class="badge ps">P</span> <small>Primary source</small>
+              <span class="badge ps">S</span> <small>Secondary source</small>
+                </span>
             </h4>
+              <div style="clear:both;"></div>
+             
           </div>
           <div class="panel-body">
             <div id="lists">

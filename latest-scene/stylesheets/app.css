@@ -428,6 +428,29 @@ a {
         width:100%;
     }
 }
+.ps {
+    margin-right:5px;
+}
+#results-list {
+    background-color:#F5F5F5;
+    border:1px solid #a5a4a4;
+    border-radius:5px;
+    margin-bottom:10px;
+    padding:0px;
+}
+#bookBox-container {
+
+}
+.panel-heading {
+    border-bottom:1px solid #a5a4a4;
+
+    background-color:#d8d8d8;
+    top:-10px;
+    padding:10px;
+}
+.panel-body {
+    padding:10px;
+}
 /* -----------------------------------------
    Transcript styles
 ----------------------------------------- */

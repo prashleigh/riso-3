@@ -22,6 +22,8 @@ function getHeader( $js, $title, $type='optional', $style=true ) {
 		    <meta name="Description" content="Garibaldi and the Risorgimento">
 		    <meta name="version" content="version 3.0">
 		    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+            <script type="text/javascript" src="'.$baseurl.'js/bootstrap.js"></script>'.$js.'
 		    <link rel="start" href="../" title="Home">
 		    <link rel="search" href="#search" title="Search this Web site">
 		    <!--<link rel=stylesheet type="text/css" href="'.$baseurl.'css/garibaldi.css">-->

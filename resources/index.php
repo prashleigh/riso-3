@@ -20,6 +20,7 @@ getHeader("","Resources") ?>
     <ul>
       <li style='display:block'>
         <div id="post1" class="post">
+            <img src="../img/explorer.png" style="padding:10px;width:270px;float:left;"><br>
             <h3>Garibaldi Resources Explorer</h3>
             <p>The Garibaldi Panorama & the Risorgimento Resource Explorer [GPE] is a visual interface aimed to provide a better understanding of the relationships between the Garibaldi Panorama and the visual and textual materials collected in the Harvard Risorgimento Preservation Collection (HRPC) as well as other library resources at Brown or elsewhere, made available through our project.</p>
             <a href="explorer.php"><button class="btn">Read More</button></a>

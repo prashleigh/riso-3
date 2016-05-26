@@ -100,7 +100,8 @@ BDR.prototype._getMod = function(metalink){
       }else{
         metaOutput += "<td></td><td></td>";
       }
-      metaOutput +='<th>Format</th><td>'+data.pagination+'</td></tr><tr><th>Library Link</th><td><a href="'+data.link+'" target="_blank">View in Library</a></td><th>Published</th><td colspan="3">'+data.publication.place+': '+data.publication.publisher+', '+data.date+'</td></tr></tbody></table>';
+      var liblink = "https://repository.library.brown.edu/studio/item/"+metalink.attr('data-pid');
+      metaOutput +='<th>Format</th><td>'+data.pagination+'</td></tr><tr><th>Library Link</th><td><a href="'+liblink+'" target="_blank">View in Library</a></td><th>Published</th><td colspan="3">'+data.publication.place+': '+data.publication.publisher+', '+data.date+'</td></tr></tbody></table>';
       metalink.siblings(".meta-content").html(metaOutput).show();
       metalink.siblings('.arrow').addClass('rotate90');
     });

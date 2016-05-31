@@ -136,7 +136,7 @@ getHeader($header,'Research the Panorama', 'scene');?>
         <!-- Facet: Publication year -->
         
         <h4>Year Published</h4>
-          <h3><small>Click and drag the mouse over the timeline to select a time range of interest or use the buttons below to see publications published in 1860, 1861, 1862 only</small></h3>
+          <h3><small>Click and drag the mouse over the timeline to select a time range of interest.</small></h3>
         
         <div id="year-chart" class="facet"
              data-facet-type="barchart" data-dimension="year"></div>

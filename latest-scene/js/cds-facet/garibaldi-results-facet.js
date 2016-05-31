@@ -138,10 +138,11 @@ define(function() {
           
           $('#resource-list').append('<p>Numbers ' + (currentViewRange.start + 1) + ' to ' + currentViewRange.end + '</p>');
         }
+        var cmp = d3.comparator()
+        .order(d3.ascending, function(d) { return d['resource-type']; })
+        .order(d3.ascending, function(d) { return d.short_title; });
         
-        allItems.sort(function(x, y){
-           return d3.ascending(x.short_title, y.short_title);
-        }).slice(currentViewRange.start, currentViewRange.end)
+        allItems.sort(cmp).slice(currentViewRange.start, currentViewRange.end)
                 .forEach(function (item) {
           
           var author, url;

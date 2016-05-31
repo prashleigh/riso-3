@@ -3,6 +3,7 @@ $header = '
 
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width">
+  <meta name="scene" content="0">
 	  
   <!-- Included CSS Files -->
   <link rel="stylesheet" href="stylesheets/royalslider.css">
@@ -103,7 +104,7 @@ getHeader($header,'Research the Panorama', 'scene');?>
           </h3>
                       <br>
         <h4>Filters 
-          <button class="btn btn-xs btn-info" style="" id="clear-filters-button">Clear all</button>
+          <button class="btn btn-xs btn-info" style="" id="clear-filters-button">Reset</button>
         </h4>
         <p>Click on the charts to select items of interest &mdash; the listing will update.</p>
         
@@ -117,13 +118,20 @@ getHeader($header,'Research the Panorama', 'scene');?>
         <!-- Facet: location -->
         
         <h4>Place of publication</h4>
-          <h3><small>To select publication sites, click and draw a square around the area of interest. Zoom in to refine the selection.</small></h3>
+          <h3><small>To select publication sites, click and draw a square around the area of interest.</small></h3>
         <div id="map">
           <div class="facet" data-facet-type="map" 
                data-dimension="location.geometry.coordinates[0];location.geometry.coordinates[1]">
           </div>
           <div class="facet" data-facet-type="template" data-dimension="year"></div>
         </div>
+          
+          <!-- Facet: Language -->
+
+        <h4>Language</h4>
+          <h3><small>Select one or more languages</small></h3>
+        <div id="text-facet-language" class="facet" 
+             data-facet-type="text" data-dimension="language"></div>
           
         <!-- Facet: Publication year -->
         
@@ -133,12 +141,7 @@ getHeader($header,'Research the Panorama', 'scene');?>
         <div id="year-chart" class="facet"
              data-facet-type="barchart" data-dimension="year"></div>
           
-        <!-- Facet: Language -->
-
-        <h4>Language</h4>
-          <h3><small>Select one or more languages</small></h3>
-        <div id="text-facet-language" class="facet" 
-             data-facet-type="text" data-dimension="language"></div>
+        
       </div>
 
       <!-- Right column - results -->

@@ -392,10 +392,9 @@ function sanitize(str){
 
 function loadResources(e, sceneIndex){
     // unclick all the buttons and click the one corresponding to selected scene
+    $('meta[name=scene]').attr('content', sceneIndex);
     $("#clear-filters-button").trigger("click");
-    currClickedButton = $("#"+sceneIndex);
-    currClickedButton.trigger("click");
-
+    
 
 }
 

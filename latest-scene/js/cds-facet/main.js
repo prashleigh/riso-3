@@ -18,9 +18,9 @@ then you can build a dimension from d.fruit -- the value of data-dimension would
 
 */
 
-requirejs(['crossfilter.min'],
+requirejs(['crossfilter.min', 'd3-comparator'],
           
-  function (_) {
+  function (_, __) {
 
     var facetDomNodes = $('.facet[data-facet-type]');
   
@@ -203,6 +203,13 @@ requirejs(['crossfilter.min'],
             facet.clearFilter();
           });
           updateAll();
+          var scene = $('meta[name=scene]').attr('content');
+//          location.reload();
+          if (scene != 0 && scene != undefined) {
+              console.log('scene is '+scene);
+              var currClickedButton = $("#"+scene);
+              currClickedButton.trigger("click");
+          }
         }
         
         $('#clear-filters-button').click(clearAll);

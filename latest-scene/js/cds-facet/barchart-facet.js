@@ -273,7 +273,7 @@ define(function() {
 
     function init() {
       addRangeReadout();
-      addPresetButtons();
+//      addPresetButtons();
       // addClearButton();
       g = addFacetContainer();
       setBrushEventHandlers();

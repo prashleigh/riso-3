@@ -10,10 +10,10 @@ getHeader($css,"Behind the Scenes")?>
         <ul class="nav nav-tabs">
             <li class="active"><a href="#project" data-toggle="tab">The Project</a></li>
             <li><a href="#about" data-toggle="tab">About the Panorama</a></li>
+            <li><a href="#jj" data-toggle="tab">J. J. Story</a></li>
             <li><a href="#digitize" data-toggle="tab">The Digitization Process</a></li>
             <li><a href="#ads" data-toggle="tab">Panorama Advertisements</a></li>
             <li><a href="#team" data-toggle="tab">Research Team</a></li>
-            <li><a href="#jj" data-toggle="tab">J. J. Story</a></li>
         </ul>
         <div class="tab-content">
             <div class="tab-pane active" id="project"><!--Project-->

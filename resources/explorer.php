@@ -80,9 +80,9 @@ getHeader('<link href="../css/bdr.css" type="text/css" rel="stylesheet">',"Portr
         
       <h4>Project credits</h4>
         <p>Manager and creator: Valeria Federici</p>
-        <p>Designer: Patrick Rashleigh</p>
+        <p>Design and implementation: Patrick Rashleigh</p>
+        <p>Web implementation: Cissy Yu '18</p>
         <p>Supervisor: Prof. Massimo Riva</p>
-        <p>Website supervisor: Elli Mylonas</p>
 
 
     </div>

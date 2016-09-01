@@ -38,13 +38,20 @@ define(function() {
     function setBrushEventHandlers() {
 
       var round = false;
-
+      
       brush.on('brushstart.chart', function () {
         var div = d3.select(this.parentNode.parentNode.parentNode);
         div.select('.title a').style('display', null);
       });
 
       brush.on('brush.chart', function () {
+        
+        // Stop event propogation with brushes
+        // (in riso site, dragging the brush also dragged the 
+        //  whole page)
+        
+        $(this).on('mousedown', function (e) { e.stopPropagation() });
+        
         var g = d3.select(this.parentNode),
             extent = brush.extent();
         if (round) {

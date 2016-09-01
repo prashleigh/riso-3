@@ -145,14 +145,14 @@ define(function() {
         allItems.sort(cmp).slice(currentViewRange.start, currentViewRange.end)
                 .forEach(function (item) {
           
-          var author, url;
+          var author, url, isPrimary;
           
           if (item.author)
             author = (item.author.join ? item.author.join(' and ') : item.author) + '<br />';
           else
             author = '';
 
-          console.log(item.URLID.substring(0,3));
+          // console.log(item.URLID.substring(0,3));
           
           if (item.URLID.substring(0,4) === 'http') {
             url = item.URLID
@@ -162,20 +162,19 @@ define(function() {
             url = RESOURCE_URL_BASE + item.URLID;
           }
 
-          var source_type;
-          if (item["resource-type"] == 'primary')
-              source_type = 'P';
-          else
-              source_type = 'S';
+          isPrimary = (item['resource-type'] === 'primary');
+                             
           // url = (item.URLID.substring(0,4) === 'http' ? '' : RESOURCE_URL_BASE) + item.URLID;
           
-          listingText = '<p> <span class="badge ps">' + source_type + '</span>' +
+          listingText = '<p>' +
             '<strong>' +
             // '<a href="' + RESOURCE_URL_BASE + item.URLID + '" target="_BLANK">' + 
             '<a href="' + url + '" target="_BLANK">' + 
                 item.short_title + '</a>' +
             '</strong>' +
-            ' (' + item.year.getFullYear() + ')<br />' +
+            ' (' + item.year.getFullYear() + ')' + 
+            (isPrimary ? ' <span title="This a primary source" class="badge ps">P</span>' : '') + 
+            '<br />' +
             author +
             // (item.author ? item.author + '<br />' : '') +
             'Scenes: ' + item.scene.map(makeSceneLink).join(', ') +

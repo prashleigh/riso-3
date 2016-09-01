@@ -27,6 +27,7 @@ $header = '
   
   
   ';
+
 require_once("../dependencies/functions.php");
 getHeader($header,'Research the Panorama', 'scene');?>
   <!-- Begin #container -->
@@ -133,6 +134,15 @@ getHeader($header,'Research the Panorama', 'scene');?>
         <div id="text-facet-language" class="facet" 
              data-facet-type="text" data-dimension="language"></div>
           
+        <!-- Facet: Primary or secondary -->
+        <!--
+        <h4>Primary or Secondary</h4>
+        
+        <div id="text-facet-resource-type" class="facet"
+             data-facet-type="text" data-dimension="resource-type"></div>-->
+             
+             <!--item['resource-type']-->
+        
         <!-- Facet: Publication year -->
         
         <h4>Year Published</h4>
@@ -160,8 +170,8 @@ getHeader($header,'Research the Panorama', 'scene');?>
                   </span>
                 <span style="float:right">
                <span class="badge ps">P</span> <small>Primary source</small>
-              <span class="badge ps">S</span> <small>Secondary source</small>
-                </span>
+              <!--<span class="badge ps">S</span> <small>Secondary source</small>
+                </span>-->
             </h4>
               <div style="clear:both;"></div>
              

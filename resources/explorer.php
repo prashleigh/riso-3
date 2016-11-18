@@ -18,11 +18,11 @@ getHeader('<link href="../css/bdr.css" type="text/css" rel="stylesheet">',"Portr
   <div class="row">
 
     <div class="span7">
-      <h2>The Garibaldi Panorama & the Risorgimento Resource Explorer</h2>
+      <h2>The Garibaldi Panorama &amp; the Risorgimento Resource Explorer</h2>
         <a href="fullexplorer.php"><button class="btn">View Full Explorer</button></a> 
         <a href="../latest-scene/#/scene/1/resources/"><button class="btn">Research the Panorama</button></a><br><br>
       <p style="text-align:justify"> 
-          The Garibaldi Panorama & the Risorgimento Resource Explorer [GPE] is a visual interface aimed to provide a better understanding of the relationships between the Garibaldi Panorama and the visual and textual materials collected in the Harvard Risorgimento Preservation Collection (HRPC) as well as other library resources at Brown or elsewhere, made available through our project.
+          The Garibaldi Panorama &amp; the Risorgimento Resource Explorer [GPE] is a visual interface aimed to provide a better understanding of the relationships between the Garibaldi Panorama and the visual and textual materials collected in the Harvard Risorgimento Preservation Collection (HRPC) as well as other library resources at Brown or elsewhere, made available through our project.
       </p>
       <p style="text-align:justify"> 
           <a href="https://search.library.brown.edu/catalog/b3682233">HRPC</a> is an archive of approximately sixteen thousand documents (books, pamphlets, broadsides) related to the Italian Risorgimento and owned by Harvard University (a complete set is also available at the Brown University library in microfilm format). Over 4,000 items from this collection were selected to build the GPE (see below).
@@ -83,8 +83,6 @@ getHeader('<link href="../css/bdr.css" type="text/css" rel="stylesheet">',"Portr
         <p>Design and implementation: Patrick Rashleigh</p>
         <p>Web implementation: Cissy Yu '18</p>
         <p>Supervisor: Prof. Massimo Riva</p>
-
-
     </div>
   </div>
 </div>
